@@ -54,7 +54,7 @@ namespace StringSafari
         public static bool HasADazzle(string str)
         {
             // TODO
-            return false;
+            return str.Contains("lion");
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace StringSafari
         public static bool HasAPride(string str)
         {
             // TODO
-            return false;
+            return str.Contains("LION");
         }
 
         /// <summary>
