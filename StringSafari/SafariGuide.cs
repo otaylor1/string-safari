@@ -18,6 +18,7 @@ namespace StringSafari
         {
             // TODO
             return str.Contains("zebra");
+          
         }
 
         /// <summary>
@@ -54,9 +55,11 @@ namespace StringSafari
         public static bool HasADazzle(string str)
         {
             // TODO
-            return str.Contains("lion");
-        }
 
+            return str.Any();
+            
+        }
+    
         /// <summary>
         /// Looks for at least two lions in <paramref name="str"/>.
         /// <para>A lion is the letters "LION", in any case combination (upper or lower)</para>
@@ -67,7 +70,7 @@ namespace StringSafari
         public static bool HasAPride(string str)
         {
             // TODO
-            return str.Contains("LION");
+            return false;
         }
 
         /// <summary>
