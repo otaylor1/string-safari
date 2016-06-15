@@ -17,7 +17,7 @@ namespace StringSafari
         public static bool HasBabyZebra(string str)
         {
             // TODO
-            return false;
+            return str.Contains("zebra");
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace StringSafari
         public static bool HasAdultZebra(string str)
         {
             // TODO
-            return false;
+            return str.Contains("ZEBRA");
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace StringSafari
         public static bool HasZebra(string str)
         {
             // TODO
-            return false;
+            return str.ToLower()== "zebra";
         }
 
         /// <summary>
