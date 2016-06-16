@@ -175,7 +175,16 @@ namespace StringSafari
 
             string newString = str.ToLower();
 
-            return (newString.StartsWith("lion"));
+            
+                if (newString.StartsWith("lion"))
+            {
+                return false;
+            }
+                else
+            {
+                return true;
+            }
+
 
 
         }
