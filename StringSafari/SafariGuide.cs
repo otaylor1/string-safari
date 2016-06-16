@@ -31,7 +31,7 @@ namespace StringSafari
             }
 
             // return str.Contains("zebra");
-            //also works
+            //also works and is prob prefered
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace StringSafari
 
 
             //return str.Contains("ZEBRA");
-            //also works
+            //also works and is prob prefered
         }
 
         /// <summary>
@@ -70,7 +70,15 @@ namespace StringSafari
         {
             // TODO
 
-            return str.ToLower()== "zebra";
+           string newString = str.ToLower();
+            return HasBabyZebra(newString);
+
+            //HasBabyZebra(str.ToLower());
+
+            // return str.ToLower().Contains("zebra")
+            
+            //both are also ways to write it
+
         }
 
         /// <summary>
