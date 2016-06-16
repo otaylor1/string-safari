@@ -15,11 +15,23 @@ namespace StringSafari
         /// <param name="str">The string to search</param>
         /// <returns>true if the string has "zebra" in it, false otherwise</returns>
         public static bool HasBabyZebra(string str)
+
         {
             // TODO
 
-            return str.Contains("zebra");
-          
+            
+
+            if (str.Contains("zebra"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+            // return str.Contains("zebra");
+            //also works
         }
 
         /// <summary>
@@ -32,7 +44,19 @@ namespace StringSafari
         {
             // TODO
 
-            return str.Contains("ZEBRA");
+            if (str.Contains("ZEBRA"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+
+            //return str.Contains("ZEBRA");
+            //also works
         }
 
         /// <summary>
@@ -63,7 +87,7 @@ namespace StringSafari
             int lastZebra = str.LastIndexOf("zebra");
             int numberOfZebras = lastZebra - firstZebra;
 
-                if (numberOfZebras >= 1)
+                if (numberOfZebras >= 2)
             {
                 return true;
             }
@@ -130,7 +154,18 @@ namespace StringSafari
         public static bool SafeDistanceToLion(string str)
         {
             // TODO
-            return false;
+
+            int firstLion = str.IndexOf("lion");
+            int lastLion = str.LastIndexOf("lion");
+            int numberOfLions = lastLion + firstLion;
+            if (numberOfLions >= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
