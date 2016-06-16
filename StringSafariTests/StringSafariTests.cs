@@ -51,7 +51,7 @@ namespace StringSafari.Test
             return SafariGuide.HasADazzle(str);
         }
 
-      /*  [TestCase("zebra", ExpectedResult = false)]
+        [TestCase("zebra", ExpectedResult = false)]
         [TestCase("Lion", ExpectedResult = false)]
         [TestCase("LION ZEBRA zebra lion", ExpectedResult = true)]
         [TestCase("zebra LION ZEBRA lion", ExpectedResult = true)]
@@ -83,6 +83,6 @@ namespace StringSafari.Test
         {
             return SafariGuide.SafeDistanceToLion(str);
         }
-        */
+        
     }
 }

@@ -121,17 +121,21 @@ namespace StringSafari
         {
             // TODO
 
-            str.ToLower();
-            int firstLion = str.IndexOf("lion");
-            int lastLion = str.LastIndexOf("lion");
-            int numberOfLions = lastLion - firstLion;
-            if (numberOfLions >=2)
+            string newString = str.ToLower();
+            int firstLion = newString.IndexOf("lion");
+            int lastLion = newString.LastIndexOf("lion");
+
+
+            if (firstLion == lastLion)
             {
-                return true;
+                //only one lion
+                return false;
             }
+
             else
             {
-                return false;
+                //at least 2 lion
+                return true;
             }
         }
 
