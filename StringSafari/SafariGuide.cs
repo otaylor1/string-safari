@@ -90,19 +90,21 @@ namespace StringSafari
         public static bool HasADazzle(string str)
         {
             // TODO
+            string newString = str.ToLower();
+            int firstZebra = newString.IndexOf("zebra");
+            int lastZebra = newString.LastIndexOf("zebra");
+            
 
-            int firstZebra = str.IndexOf("zebra");
-            int lastZebra = str.LastIndexOf("zebra");
-            int numberOfZebras = lastZebra - firstZebra;
-
-                if (numberOfZebras >= 2)
+                if (firstZebra == lastZebra)
             {
-                return true;
+                //only one zebra
+                return false;
             }
 
             else
             {
-                return false;
+                //at least 2 zebras
+                return true;
             }
          
             
