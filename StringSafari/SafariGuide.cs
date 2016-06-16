@@ -19,7 +19,7 @@ namespace StringSafari
         {
             // TODO
 
-            
+
 
             if (str.Contains("zebra"))
             {
@@ -70,13 +70,13 @@ namespace StringSafari
         {
             // TODO
 
-           string newString = str.ToLower();
+            string newString = str.ToLower();
             return HasBabyZebra(newString);
 
             //HasBabyZebra(str.ToLower());
 
             // return str.ToLower().Contains("zebra")
-            
+
             //both are also ways to write it
 
         }
@@ -93,9 +93,9 @@ namespace StringSafari
             string newString = str.ToLower();
             int firstZebra = newString.IndexOf("zebra");
             int lastZebra = newString.LastIndexOf("zebra");
-            
 
-                if (firstZebra == lastZebra)
+
+            if (firstZebra == lastZebra)
             {
                 //only one zebra
                 return false;
@@ -106,10 +106,10 @@ namespace StringSafari
                 //at least 2 zebras
                 return true;
             }
-         
-            
+
+
         }
-    
+
         /// <summary>
         /// Looks for at least two lions in <paramref name="str"/>.
         /// <para>A lion is the letters "LION", in any case combination (upper or lower)</para>
@@ -128,7 +128,7 @@ namespace StringSafari
 
             if (firstLion == lastLion)
             {
-                //only one lion
+                //only one or zero lion
                 return false;
             }
 
@@ -149,15 +149,19 @@ namespace StringSafari
         {
             // TODO
 
-            if (HasAPride(str) && !HasADazzle(str))
+            if (HasAPride(str) && (!HasADazzle(str)) && HasZebra(str))
             {
                 return true;
             }
             else
-            { return false;
+            {
+                return false;
             }
-        }
 
+
+
+
+        }
         /// <summary>
         /// Looks for a lion and determines if the lion is far enough away for safety.
         /// <para>If there is no lion, this method returns true.</para>
@@ -169,17 +173,13 @@ namespace StringSafari
         {
             // TODO
 
-            int firstLion = str.IndexOf("lion");
-            int lastLion = str.LastIndexOf("lion");
-            int numberOfLions = lastLion + firstLion;
-            if (numberOfLions >= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            string newString = str.ToLower();
+
+            return (newString.StartsWith("lion"));
+
+
         }
+
+
     }
 }

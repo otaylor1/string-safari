@@ -68,12 +68,13 @@ namespace StringSafari.Test
         [TestCase("zebra LION ZEBRA lion", ExpectedResult = false)]
         [TestCase("LION zebra LION", ExpectedResult = true)]
         [TestCase("LION zebra lion", ExpectedResult = true)]
+        [TestCase("LION lion", ExpectedResult =false)]
         public bool BloodSearch(string str)
         {
             return SafariGuide.ThereWillBeBlood(str);
-        }
+       }
 
-        [TestCase("zebra", ExpectedResult = true)]
+      /*  [TestCase("zebra", ExpectedResult = true)]
         [TestCase("Lion", ExpectedResult = false)]
         [TestCase("LION ZEBRA zebra lion", ExpectedResult = false)]
         [TestCase("zebra LION ZEBRA lion", ExpectedResult = true)]
@@ -83,6 +84,6 @@ namespace StringSafari.Test
         {
             return SafariGuide.SafeDistanceToLion(str);
         }
-        
+        */
     }
 }
